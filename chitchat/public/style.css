@@ -1,4 +1,4 @@
-* {
+*{
   box-sizing: border-box;
   overflow-x: hidden;
 }
@@ -72,12 +72,14 @@ body {
 
 /*Signup box container */
 .container {
+  position: absolute;
   box-shadow: 10px 10px 5px 5px rgba(255, 255, 255, 0.2);
   border-radius: 50px;
   background-color: rgba(255, 255, 255, 0.01);
   width: 75%;
   margin-left: 12.5%;
-  margin-top: 5%;
+  margin-right: 12.5%;
+  top: 12.5%;
   z-index: 100;
 }
 
@@ -94,7 +96,7 @@ body {
   font-size: 30px;
   font-weight: 700;
   color: white;
-  font-weight: "Ubuntu";
+  font-family: "Ubuntu";
 }
 /* left side image */
 .l .image {
@@ -138,12 +140,13 @@ body {
 /* register button */
 .register {
   background-color: #67619e;
-  padding: 2px 10px 2px 10px;
+  padding: 2px 20px 2px 20px;
   font-size: larger;
   color: white;
   font-weight: bold;
   border-radius: 10px;
   margin-top: -5px;
+  font-family: "Ubuntu";
 }
 
 /* other signup links category */
