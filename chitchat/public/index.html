@@ -1,122 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-      rel="stylesheet"
-    />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>HI-CON</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-    <div class="bubble1"></div>
-    <div class="bubble2"></div>
-    <div class="bubble3"></div>
-    <div class="bubble4"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-7 l">
-          <div class="con">Hi Let's Connect !!</div>
-          <div class="image">
-            <img
-              src="Connected_world-amico.png"
-              alt="Connected_world-amico"
-              width="70%"
-              height="70%"
-            />
-          </div>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/284806069e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="bubble1"></div>
+  <div class="bubble2"></div>
+  <div class="bubble3"></div>
+  <div class="bubble4"></div>
+    <div class="container" id="container">
+      
+      <div class="form-container sign-up-container">
+        <img src="logo.png" height="40rem" width="30%" />
+        <h3>Hi Let's Connect !!</h3>  
+            <form action="#">
+                <h1>Create Account</h1>
+                <input type="text" placeholder="Name" />
+                <input type="email" placeholder="Email" />
+                <input type="password" placeholder="Password" />
+                <button>Sign Up</button>
+                <span>Or SignUp using:</span>
+                <div class="social-container">
+                <!--  <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#" class="social"><i class="fab fa-google"></i></a>
+                  <a href="#" class="social"><i class="fab fa-twitter"></i></a> -->
+                  <a href="#" class="social"><img src="search.png" alt="Google" class="icons" /></a>
+                  <a href="#" class="social"><img src="facebook.png" alt="Google" class="icons" /></a>
+                  <a href="#" class="social"><img src="twitter.png" alt="Google" class="icons" /></a>
+              </div>
+            </form>
         </div>
-        <div class="col-5 r text-center">
-          <img src="logo.png" height="60rem" width="50%" />
-
-          <div class="signup text-start">SIGN UP</div>
-          <form>
-            <div class="mb-3">
-              <input
-                type="email"
-                class="form-control"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
-                placeholder="Enter your e-mail address"
-              />
-            </div>
-            <div class="mb-3">
-              <input
-                type="email"
-                class="form-control"
-                id="exampleInputEmail1"
-                placeholder="Enter your username"
-              />
-            </div>
-            <div class="mb-3">
-              <input
-                type="password"
-                class="form-control"
-                id="exampleInputPassword1"
-                placeholder="Enter your password"
-              />
-            </div>
-            <div class="mb-3 form-check">
-              <input
-                type="checkbox"
-                class="form-check-input"
-                id="exampleCheck1"
-              />
-              <label class="form-check-label" for="exampleCheck1"
-                >You have read all T&C and you are agree with them</label
-              >
-            </div>
-            <button type="submit" class="btn register">Register</button>
-          </form>
-          <div class="text-center fs-6 text-white links">Or SignUp with:</div>
-          <div class="d-flex justify-content-evenly">
-            <img src="search.png" alt="Google" class="icons" />
-            <img src="facebook.png" alt="Google" class="icons" />
-            <img src="twitter.png" alt="Google" class="icons" />
-          </div>
+        <div class="form-container sign-in-container">
+          <img src="logo.png" height="40rem" width="30%" />
+          <h3>Hi Let's Connect !!</h3> 
+            <form action="#">
+                <h1>Sign in</h1>
+                
+                <input type="email" placeholder="Email" />
+                <input type="password" placeholder="Password" />
+                <a href="#">Forgot your password?</a>
+                <button>Sign In</button>
+                <span>Or SignIn using:</span>
+                <div class="social-container">
+                  <!--  <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google"></i></a>
+                    <a href="#" class="social"><i class="fab fa-twitter"></i></a> -->
+                    <a href="#" class="social"><img src="search.png" alt="Google" class="icons" /></a>
+                    <a href="#" class="social"><img src="facebook.png" alt="Google" class="icons" /></a>
+                    <a href="#" class="social"><img src="twitter.png" alt="Google" class="icons" /></a>
+                </div>
+            </form>
         </div>
-      </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button class="ghost" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Enter your personal details and start journey with us</p>
+                    <button class="ghost" id="signUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
     </div>
-  </body>
+<script src="test.js"></script>
+</body>
 </html>
