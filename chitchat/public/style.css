@@ -19,6 +19,7 @@ body {
 	align-items: center;
 	flex-direction: column;
 	font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
 }
 /* first bubble */
 .bubble1 {
@@ -152,7 +153,7 @@ input {
    /* backdrop-filter: blur(13px) saturate(200%);
     -webkit-backdrop-filter: blur(13px) saturate(200%);*/
     z-index: 100;
-    border: 1px solid rgba(209, 213, 219, 0.3);
+   /* border: 1px solid rgba(209, 213, 219, 0.3);*/
 	position: relative;
 	overflow: hidden;
 	width: 60%;
