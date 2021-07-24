@@ -1,76 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/284806069e.js" crossorigin="anonymous"></script>
-</head>
-<body>
-  <div class="bubble1"></div>
-  <div class="bubble2"></div>
-  <div class="bubble3"></div>
-  <div class="bubble4"></div>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/284806069e.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="bubble1"></div>
+    <div class="bubble2"></div>
+    <div class="bubble3"></div>
+    <div class="bubble4"></div>
     <div class="container" id="container">
-      
       <div class="form-container sign-up-container">
-        <img src="logo.png" height="40rem" width="30%" />
-        <h3>Hi Let's Connect !!</h3>  
-            <form action="#">
-                <h1>Create Account</h1>
-                <input type="text" placeholder="Name" />
-                <input type="email" placeholder="Email" />
-                <input type="password" placeholder="Password" />
-                <button>Sign Up</button>
-                <span>Or SignUp using:</span>
-                <div class="social-container">
-                <!--  <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+        <img src="logo.png" class="logo" />
+        <h3>Hi Let's Connect !!</h3>
+        <form action="#">
+          <h1>Create Account</h1>
+          <input type="text" placeholder="Name" />
+          <input type="email" placeholder="Email" />
+          <input type="password" placeholder="Password" />
+          <button>Sign Up</button>
+          <span>Or SignUp using:</span>
+          <div class="social-container">
+            <!--  <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
                   <a href="#" class="social"><i class="fab fa-google"></i></a>
                   <a href="#" class="social"><i class="fab fa-twitter"></i></a> -->
-                  <a href="#" class="social"><img src="search.png" alt="Google" class="icons" /></a>
-                  <a href="#" class="social"><img src="facebook.png" alt="Google" class="icons" /></a>
-                  <a href="#" class="social"><img src="twitter.png" alt="Google" class="icons" /></a>
-              </div>
-            </form>
-        </div>
-        <div class="form-container sign-in-container">
-          <img src="logo.png" height="40rem" width="30%" />
-          <h3>Hi Let's Connect !!</h3> 
-            <form action="#">
-                <h1>Sign in</h1>
-                
-                <input type="email" placeholder="Email" />
-                <input type="password" placeholder="Password" />
-                <a href="#">Forgot your password?</a>
-                <button>Sign In</button>
-                <span>Or SignIn using:</span>
-                <div class="social-container">
-                  <!--  <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social"
+              ><img src="search.png" alt="Google" class="icons"
+            /></a>
+            <a href="#" class="social"
+              ><img src="facebook.png" alt="Google" class="icons"
+            /></a>
+            <a href="#" class="social"
+              ><img src="twitter.png" alt="Google" class="icons"
+            /></a>
+          </div>
+        </form>
+      </div>
+      <div class="form-container sign-in-container">
+        <img src="logo.png" class="logo" />
+        <h3>Hi Let's Connect !!</h3>
+        <form action="#">
+          <h1>Sign in</h1>
+
+          <input type="email" placeholder="Email" />
+          <input type="password" placeholder="Password" />
+          <a href="#">Forgot your password?</a>
+          <button>Sign In</button>
+          <span>Or SignIn using:</span>
+          <div class="social-container">
+            <!--  <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" class="social"><i class="fab fa-google"></i></a>
                     <a href="#" class="social"><i class="fab fa-twitter"></i></a> -->
-                    <a href="#" class="social"><img src="search.png" alt="Google" class="icons" /></a>
-                    <a href="#" class="social"><img src="facebook.png" alt="Google" class="icons" /></a>
-                    <a href="#" class="social"><img src="twitter.png" alt="Google" class="icons" /></a>
-                </div>
-            </form>
+            <a href="#" class="social"
+              ><img src="search.png" alt="Google" class="icons"
+            /></a>
+            <a href="#" class="social"
+              ><img src="facebook.png" alt="Google" class="icons"
+            /></a>
+            <a href="#" class="social"
+              ><img src="twitter.png" alt="Google" class="icons"
+            /></a>
+          </div>
+        </form>
+      </div>
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h1>Welcome Back!</h1>
+            <p>
+              To keep connected with us please login with your personal info
+            </p>
+            <button class="ghost" id="signIn">Sign In</button>
+          </div>
+          <div class="overlay-panel overlay-right">
+            <h1>Hello, Friend!</h1>
+            <p>Enter your personal details and start journey with us</p>
+            <button class="ghost" id="signUp">Sign Up</button>
+          </div>
         </div>
-        <div class="overlay-container">
-            <div class="overlay">
-                <div class="overlay-panel overlay-left">
-                    <h1>Welcome Back!</h1>
-                    <p>To keep connected with us please login with your personal info</p>
-                    <button class="ghost" id="signIn">Sign In</button>
-                </div>
-                <div class="overlay-panel overlay-right">
-                    <h1>Hello, Friend!</h1>
-                    <p>Enter your personal details and start journey with us</p>
-                    <button class="ghost" id="signUp">Sign Up</button>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
-<script src="test.js"></script>
-</body>
+    <script src="test.js"></script>
+  </body>
 </html>
