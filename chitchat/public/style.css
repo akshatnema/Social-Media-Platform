@@ -14,13 +14,14 @@ body {
     #78c8c4 80.28%
   );
   height: 100vh;
-  width:100vw;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   font-family: "Ubuntu Mono", monospace;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 /* first bubble */
 .bubble1 {
@@ -111,7 +112,7 @@ button {
   color: #ffffff;
   font-size: 12px;
   font-weight: bold;
-  padding: 12px 45px;
+  padding: 12px 30px;
   letter-spacing: 1px;
   text-transform: uppercase;
   transition: transform 80ms ease-in;
@@ -135,7 +136,7 @@ form {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 0 50px;
+  padding: 0 35px;
   height: 100%;
   text-align: center;
   margin-top: -20px;
@@ -160,7 +161,7 @@ input:focus {
 }
 
 .logo {
-  height: 4rem;
+  height: 10%;
   margin-bottom: 1rem;
 }
 
@@ -170,7 +171,7 @@ input:focus {
   z-index: 100;
   /* border: 1px solid rgba(209, 213, 219, 0.3);*/
   position: relative;
-  overflow: hidden;
+  overflow-y: hidden;
   width: 60%;
   height: 70%;
   max-width: 100%;
@@ -272,8 +273,7 @@ input:focus {
 }
 /* other sign up category icons */
 .icons {
-  height: 40px;
-  width: 40px;
+  height: 35px;
   padding: 10px 10px 10px 10px;
   border-radius: 20px;
   background-color: white;
