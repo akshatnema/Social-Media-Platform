@@ -127,8 +127,14 @@ button:focus {
 }
 
 button.ghost {
-  background-color: transparent;
+  background:none;
   border-color: #ffffff;
+}
+
+button.ghost:hover{
+  background: rgba(255, 255, 255, 0.3);
+	box-shadow: 15px 15px 30px rgba(255, 255, 255, 0.2),
+	  15px -15px 30px rgba(0, 0, 0, 0.2);
 }
 
 form {
@@ -158,6 +164,10 @@ input {
 textarea:focus,
 input:focus {
   outline: none;
+}
+
+p{
+  font-weight: 700;
 }
 
 .logo {
@@ -295,7 +305,7 @@ input:focus {
 }
 
 .overlay-left {
-  background-image: url("picture.png");
+  background-image: url("./images/picture.png");
   background-size: cover;
   transform: translateX(-20%);
 }
@@ -305,7 +315,7 @@ input:focus {
 }
 
 .overlay-right {
-  background-image: url("pic.png");
+  background-image: url("./images/pic.png");
   background-size: cover;
   right: 0;
   transform: translateX(0);
