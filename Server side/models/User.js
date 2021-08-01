@@ -6,7 +6,7 @@ const UserSchema = new mongoose.Schema(
   {
     username: {
       type: String,
-    //   required: true,
+      required: true,
       trim:true,
       min: 3,
       max: 20,
@@ -15,12 +15,17 @@ const UserSchema = new mongoose.Schema(
     },
     email: {
       type: String,
-    //   required: true,
+      required: true,
       max: 50,
-      unique: true,
       sparse:true
     },
     googleId:{
+        type:String
+    },
+    facebookId:{
+        type:String
+    },
+    twitterId:{
         type:String
     },
     profilePicture: {
