@@ -161,7 +161,7 @@ passport.use(
     {
       consumerKey: process.env.TWITTER_CONSUMER_KEY,
       consumerSecret: process.env.TWITTER_CONSUMER_SECRET,
-      callbackURL: "http://www.example.com/auth/twitter/callback",
+      callbackURL: "http://localhost:8080/auth/twitter/HI-CON",
       userProfileURL:
         "https://api.twitter.com/1.1/account/verify_credentials.json?include_email=true",
       includeEmail: true,
