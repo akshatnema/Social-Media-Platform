@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "../code/keeper-app-part-1-starting"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Social-Media-Platform",
+		"files.associations": {
+			"iostream": "cpp"
+		},
+		"git.ignoreLimitWarning": true
+	}
+}
