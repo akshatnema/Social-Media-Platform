@@ -156,45 +156,45 @@ router.get(
 
 // Twitter Login strategy
 
-// passport.use(
-//   new TwitterStrategy(
-//     {
-//       consumerKey: process.env.TWITTER_CONSUMER_KEY,
-//       consumerSecret: process.env.TWITTER_CONSUMER_SECRET,
-//       callbackURL: "http://www.example.com/auth/twitter/callback",
-//       userProfileURL:
-//         "https://api.twitter.com/1.1/account/verify_credentials.json?include_email=true",
-//       includeEmail: true,
-//     },
-//     async (token, tokenSecret, profile, done) => {
-//      let newname = await generateUniqueAccountName(profile.displayName);
-//       User.findOrCreate(
-//         {
-//           twiiterId: profile.id,
-//           username: newname,
-//           email: profile.emails[0].value,
-//         },
-//         function (err, user) {
-//           if (err) {
-//             return done(err);
-//           }
-//           done(null, user);
-//         }
-//       );
-//     }
-//   )
-// );
+passport.use(
+  new TwitterStrategy(
+    {
+      consumerKey: process.env.TWITTER_CONSUMER_KEY,
+      consumerSecret: process.env.TWITTER_CONSUMER_SECRET,
+      callbackURL: "http://www.example.com/auth/twitter/callback",
+      userProfileURL:
+        "https://api.twitter.com/1.1/account/verify_credentials.json?include_email=true",
+      includeEmail: true,
+    },
+    async (token, tokenSecret, profile, done) => {
+     let newname = await generateUniqueAccountName(profile.displayName);
+      User.findOrCreate(
+        {
+          twiiterId: profile.id,
+          username: newname,
+          email: profile.emails[0].value,
+        },
+        function (err, user) {
+          if (err) {
+            return done(err);
+          }
+          done(null, user);
+        }
+      );
+    }
+  )
+);
 
-// router.get("/twitter", passport.authenticate("twitter"));
+router.get("/twitter", passport.authenticate("twitter"));
 
-// router.get(
-//   "/twitter/HI-CON",
-//   passport.authenticate("twitter", {
-  // failureMessage:"Cannot login with twitter try again later",
-  // failureRedirect: failureLoginUrl ,
-  // successRedirect: successLoginUrl
-//   })
-// );
+router.get(
+  "/twitter/HI-CON",
+  passport.authenticate("twitter", {
+  failureMessage:"Cannot login with twitter try again later",
+  failureRedirect: failureLoginUrl ,
+  successRedirect: successLoginUrl
+  })
+);
 
 //Local strategy
 
