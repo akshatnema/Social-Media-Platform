@@ -55,14 +55,13 @@ function Login() {
       e.preventDefault();
 
     //   const LoginUrl = `https://hi-con.herokuapp.com/api/auth/${e.target.alt}`;
-        const LoginUrl = `http://localhost:8080/api/auth/${e.target.alt}`;
+        const LoginUrl = `http://127.0.0.1:8080/api/auth/${e.target.alt}`;
       const newWindow = window.open(LoginUrl,'_blank','width=500, height=600');
       if(newWindow)
       {
          let timer = setInterval(() => {
               if(newWindow.closed)
              {
-                console.log("Authentication done");
                 fetchAuthUser();
                 clearInterval(timer);
             }

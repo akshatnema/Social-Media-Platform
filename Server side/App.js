@@ -20,6 +20,8 @@ app.use(session({
     secret:"sinuocbsdj",
     resave:false,
     saveUninitialized:false,
+    key:'sid',
+    cookie:{secure:true}
 }));
 app.use(bodyParser.urlencoded({
     extended:true

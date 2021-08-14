@@ -161,26 +161,34 @@ passport.use(
     {
       consumerKey: process.env.TWITTER_CONSUMER_KEY,
       consumerSecret: process.env.TWITTER_CONSUMER_SECRET,
-      callbackURL: "http://www.example.com/auth/twitter/callback",
+      callbackURL: "http://localhost:8080/api/auth/twitter/HI-CON",
       userProfileURL:
         "https://api.twitter.com/1.1/account/verify_credentials.json?include_email=true",
       includeEmail: true,
     },
     async (token, tokenSecret, profile, done) => {
      let newname = await generateUniqueAccountName(profile.displayName);
-      User.findOrCreate(
-        {
-          twiiterId: profile.id,
-          username: newname,
-          email: profile.emails[0].value,
-        },
-        function (err, user) {
-          if (err) {
+     User.findOne({
+      'twitterId': profile.id 
+    }, function(err, user) {
+        if (err) {
             return done(err);
-          }
-          done(null, user);
         }
-      );
+        if (!user) {
+            user = new User({
+                email: 'profile.emails[0].value',
+                username: newname,
+                twitterId: profile.id
+            });
+            user.save(function(err) {
+                if (err) console.log(err);
+                return done(err, user);
+            });
+        } else {
+            return done(err, user);
+        }
+    });
+    console.log(profile);
     }
   )
 );
@@ -190,10 +198,12 @@ router.get("/twitter", passport.authenticate("twitter"));
 router.get(
   "/twitter/HI-CON",
   passport.authenticate("twitter", {
-  failureMessage:"Cannot login with twitter try again later",
-  failureRedirect: failureLoginUrl ,
-  successRedirect: successLoginUrl
-  })
+    failureRedirect: failureLoginUrl ,
+    session: true
+  }),(req,res) => {
+    // res.json(req.user);
+    res.redirect(successLoginUrl);
+  }
 );
 
 //Local strategy
@@ -236,7 +246,6 @@ const checkUserStatus = (req,res,next) => {
   if(req.user){
     next();
   }else{
-    console.log(req.user);
     res.status(476).send("You must login first");
   }
 }
