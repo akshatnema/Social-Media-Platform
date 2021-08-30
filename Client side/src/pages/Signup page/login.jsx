@@ -5,7 +5,7 @@ import logo from "../../assets/logo.png";
 import google from "../../assets/search.png";
 import twitter from "../../assets/twitter.png";
 import { AuthContext } from '../../Context/Authcontext';
-import "./login.css";
+import "./login.scss";
 
 function Login() {
   const [state, setstate] = useState(false);

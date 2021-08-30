@@ -7,6 +7,7 @@ const TwitterStrategy = require("passport-twitter").Strategy;
 
 passport.use(User.createStrategy());
 passport.serializeUser(function (user, done) {
+  console.log("Serializing user..");
   done(null, user.id);
 });
 
@@ -48,6 +49,7 @@ passport.use(
       callbackURL: "http://localhost:8080/api/auth/google/HI-CON",
     },
     async (accessToken, refreshToken, profile, done) => {
+      console.log(profile);
       let newname = await generateUniqueAccountName(profile.displayName);
       User.findOne({
         'googleId': profile.id 
@@ -161,7 +163,7 @@ passport.use(
     {
       consumerKey: process.env.TWITTER_CONSUMER_KEY,
       consumerSecret: process.env.TWITTER_CONSUMER_SECRET,
-      callbackURL: "http://localhost:8080/api/auth/twitter/HI-CON",
+      callbackURL: "http://127.0.0.1:8080/api/auth/twitter/HI-CON",
       userProfileURL:
         "https://api.twitter.com/1.1/account/verify_credentials.json?include_email=true",
       includeEmail: true,
@@ -238,6 +240,18 @@ router.post('/login', function(req, res, next) {
       return res.status(200).json(user);
     });
   })(req, res, next);
+});
+
+//Logout
+
+router.get('/logout', function (req, res){
+  req.logOut();
+  res.clearCookie('connect.sid');
+  req.session.destroy(function (err) {
+    res
+        .status(200)
+        .json({ success: true, message: 'User logged out successfully' })
+  });
 });
 
 //Check if user is authenticated

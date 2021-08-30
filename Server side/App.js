@@ -9,19 +9,23 @@ const  passport=require("passport");
 const userRoute = require("./routes/users");
 const authRoute = require("./routes/auth");
 const bodyParser = require("body-parser");
+const cookieParser = require('cookie-parser');
 // const cors = require("cors");
 
 const app = express();
 const PORT = process.env.PORT || 8080;
 
+app.use(cookieParser());
 app.set("trust proxy",1);
 
 app.use(session({
     secret:"sinuocbsdj",
     resave:false,
     saveUninitialized:false,
-    key:'sid',
-    cookie:{secure:true}
+    cookie:{
+        secure:false,
+        sameSite:'Lax'
+    }
 }));
 app.use(bodyParser.urlencoded({
     extended:true
@@ -51,7 +55,7 @@ app.use(function(req, res, next) {
     res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, PATCH, DELETE");
     res.setHeader("Access-Control-Allow-Credentials", true);
     next();
-    });
+});
 
 app.listen(process.env.PORT || 8080, () => {
     console.log('server running at ' + PORT)
