@@ -1,34 +1,42 @@
-.right{
-    position: fixed;
-    left: 77%;
-    width:23%;
+.right1 {
+  position: fixed;
+  left: 77%;
+  width: 23%;
   background-color: #eaecf3;
   padding: 10px 30px 10px 10px;
   top: 4rem;
-}
+  height:100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-  .right-a{
+  .right-a {
     text-decoration: none;
-    margin-left:100px;
-    margin-top:13px;
+    margin-top: 13px;
   }
 
-  .account{
-    margin-top:73%;
+  .account {
+    position: absolute;
+    bottom: 80px;
   }
- .acc-name{
-   font-size:18px;
-   margin-left: 20px;
- }
+  .acc-name {
+    font-size: 18px;
+    margin-left: 20px;
+  }
   .arrow {
     border: solid black;
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 3px;
-    margin-left: 200px;
+    margin-left:10rem;
   }
 
   .down {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
   }
+  .d{
+    display: flex;
+    justify-content: space-between;
+  }
+}
