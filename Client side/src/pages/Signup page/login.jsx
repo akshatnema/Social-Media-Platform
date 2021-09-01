@@ -100,7 +100,7 @@ function Login() {
 
             <input type="text" placeholder="Username" required value={name} onChange={(e) => {setName(e.target.value)}} />
             <input type="password" placeholder="Password" required value={password} onChange={(e) => {setPassword(e.target.value)}} />
-            <a href="/home">Forgot your password?</a>
+            <a href="/">Forgot your password?</a>
             <button>Sign In</button>
             <span>Or SignIn using:</span>
             <div className="social-container">
