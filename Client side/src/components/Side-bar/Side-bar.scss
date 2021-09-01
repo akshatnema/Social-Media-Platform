@@ -1,7 +1,7 @@
 .left-cont {
   width: 15%;
   height: 100vh;
-  margin-top: 100px;
+  margin-top: 4rem;
   background-color: #eaecf3;
   display: inline-block;
   position: fixed;
@@ -41,15 +41,16 @@
   .left {
     margin-left: 3px;
   }
-  .addpost {
+  .btns {
     background-color: whitesmoke;
     border: none;
     border-radius: 20px;
     padding: 10px 20px;
     margin-left: 25%;
     margin-top: 2rem;
+    width:8rem;
   }
-  .addpost:hover {
+  .btns:hover {
     background: linear-gradient(
       90deg,
       rgba(195, 253, 239, 1) 0%,

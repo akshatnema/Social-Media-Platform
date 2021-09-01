@@ -1,6 +1,7 @@
 import React from "react";
 import Post from "../../components/Post/Post";
 import Left from "../../components/Side-bar/left";
+import Navbar from "../../components/Navbar/Navbar.jsx";
 import axios from "axios";
 import './home.scss';
 
@@ -21,6 +22,7 @@ function home() {
 
   return (
     <div className="Homepage">
+    <Navbar />
       <Left Logout={Logout}/>
       <div className="posts">
         <Post />
