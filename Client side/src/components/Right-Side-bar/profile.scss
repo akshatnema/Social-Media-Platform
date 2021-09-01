@@ -1,0 +1,25 @@
+.right-para {
+    margin-top: 15px;
+  }
+  .img{
+    margin-top:inherit;
+    border-radius: 50%;
+  }
+  
+  .btn-right {
+    background: linear-gradient(
+      90deg,
+      rgba(195, 253, 239, 1) 0%,
+      rgba(210, 215, 253, 1) 100%
+    );
+    box-shadow: 7px 4px 4px rgba(0, 0, 0, 0.25);
+    float: right;
+    padding: 10px 20px;
+    border-radius: 20px;
+    display: flex;
+  }
+  .text{
+   margin-top: inherit;
+    margin-left: -50px;
+    text-align: left;
+  }

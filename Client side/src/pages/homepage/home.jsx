@@ -4,6 +4,7 @@ import Left from "../../components/Side-bar/left";
 import Navbar from "../../components/Navbar/Navbar.jsx";
 import axios from "axios";
 import './home.scss';
+import Bar from "../../components/Right-Side-bar/Bar"
 
 function home() {
   const Logout = async () => {
@@ -29,6 +30,7 @@ function home() {
         <Post />
         <Post />
       </div>
+     <Bar user="Akshat"/> 
     </div>
   );
 }
