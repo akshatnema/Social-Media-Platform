@@ -10,6 +10,7 @@ function Left(props) {
         <i class="fas fa-plus"></i> Add Post
       </button></center>
       <h3>Menu</h3>
+      <Button type="Home" />
       <Button type="Profile" />
       <Button type="Saved Post" />
       <Button type="Explore" />

@@ -26,7 +26,8 @@ function Bar(props) {
       <div className="account">
         <h4>Account</h4>
         <hr />
-        <div className="d-lg-inline-flex acc-details">
+        <div className="d acc-details">
+        <div>
           <img
             src={img}
             alt="profile"
@@ -34,7 +35,7 @@ function Bar(props) {
             width="30px"
             className="img"
           ></img>
-          <div className="acc-name">{props.user}</div>
+          <div className="acc-name">{props.user}</div></div>
           <p>
             <i class="arrow down"></i>
           </p>
