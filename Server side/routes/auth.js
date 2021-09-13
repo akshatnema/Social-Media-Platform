@@ -61,7 +61,8 @@ passport.use(
               user = new User({
                   email: profile.emails[0].value,
                   username: newname,
-                  googleId: profile.id
+                  googleId: profile.id,
+                  profilePicture: profile.photos[0].value
               });
               user.save(function(err) {
                   if (err) console.log(err);
@@ -126,7 +127,7 @@ passport.use(
             user = new User({
                 email: profile.emails[0].value,
                 username: newname,
-                facebookId: profile.id
+                facebookId: profile.id,
             });
             user.save(function(err) {
                 if (err) console.log(err);

@@ -5,7 +5,7 @@ import { FaSearch } from "react-icons/fa";
 import { BsFillChatDotsFill, BsPeopleCircle, BsBellFill } from "react-icons/bs";
 import Logo from "./Logo"
 
-export const Navbar = () => {
+export const Navbar = (props) => {
   return (
     <>
       <nav className="main-nav">
@@ -45,9 +45,7 @@ export const Navbar = () => {
 
               <li>
                 <a href="" target="_blank">
-                  {" "}
-                  {/* user profile */}
-                  <BsPeopleCircle size={27} />
+                  <img src={props.User.profilePicture} className="profilepic" />
                 </a>
               </li>
             </ul>

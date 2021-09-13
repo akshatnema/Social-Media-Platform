@@ -21,7 +21,6 @@ function Post() {
         <img
           src={img}
           alt="Your network connection is slow"
-          srcset=""
           className="mid-img"
         />
         </center>

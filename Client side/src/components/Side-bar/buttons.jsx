@@ -6,11 +6,11 @@ function Button(props) {
     e.target.classList.add("btn-leftx");
   };
   return (
-    <div class="sidebarWrapper">
+    <div className="sidebarWrapper">
       <button
         type="button"
         onClick={addstyle}
-        class="btn-left "
+        className="btn-left "
       >
         {props.type}
       </button>
