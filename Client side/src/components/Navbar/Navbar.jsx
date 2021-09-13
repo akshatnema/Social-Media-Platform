@@ -1,8 +1,9 @@
 import React from "react";
 import "./Navbar.scss";
 import { IconContext } from "react-icons/lib";
-import { BsFillChatDotsFill, BsBellFill } from "react-icons/bs";
-import logo from "../../assets/logo.png";
+import { FaSearch } from "react-icons/fa";
+import { BsFillChatDotsFill, BsPeopleCircle, BsBellFill } from "react-icons/bs";
+import Logo from "./Logo"
 
 export const Navbar = (props) => {
   return (
@@ -10,9 +11,7 @@ export const Navbar = (props) => {
       <nav className="main-nav">
         {/* 1st logo  */}
 
-        <a className="logoo" href="/">
-          <img src={logo} alt="logo" />
-        </a>
+        <Logo />
 
         {/* 2nd Search */}
 

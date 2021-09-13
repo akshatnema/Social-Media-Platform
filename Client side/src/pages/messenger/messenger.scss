@@ -1,0 +1,25 @@
+.title{
+    background-color:rgb(182, 178, 178);
+    color:black;
+    display: flex;
+    flex-direction:row;
+    margin-left: -6%;
+    padding-top: 5px ;
+    img{
+        margin-left: 20px;
+        width: 50px;
+        height: 50px;
+        border-radius:50%;
+    }
+    .title-con{
+        margin-left:10px;
+        margin-top:8px;
+        .down{
+            font-size: 13px;
+        }
+    }
+}
+
+.fas{
+    margin-left:50%;
+}
