@@ -82,4 +82,10 @@
  .right ul li:first-child{
      grid-column: 2/3;
  }
+
+ .profilepic{
+     height:32px;
+     width: 32px;
+     border-radius: 50%;
+ }
 }

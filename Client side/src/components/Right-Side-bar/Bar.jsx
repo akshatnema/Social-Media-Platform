@@ -11,7 +11,7 @@ function Bar(props) {
             <strong>Suggestions For You</strong>
           </span>
           <span>
-            <a href="https://github.com/" class="right-a">
+            <a href="https://github.com/" className="right-a">
               See All
             </a>
           </span>
@@ -37,7 +37,7 @@ function Bar(props) {
           ></img>
           <div className="acc-name">{props.user}</div></div>
           <p>
-            <i class="arrow down"></i>
+            <i className="arrow down"></i>
           </p>
         </div>
       </div>
