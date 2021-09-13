@@ -1,12 +1,15 @@
-import React from "react";
+import React,{useContext} from "react";
 import Post from "../../components/Post/Post";
 import Left from "../../components/Side-bar/left";
 import Navbar from "../../components/Navbar/Navbar.jsx";
 import axios from "axios";
 import './home.scss';
 import Bar from "../../components/Right-Side-bar/Bar"
+import { AuthContext } from "../../Context/Authcontext";
 
-function home() {
+function Home() {
+  const { user } = useContext(AuthContext);
+
   const Logout = async () => {
     try {
       sessionStorage.removeItem("user");
@@ -23,7 +26,7 @@ function home() {
 
   return (
     <div className="Homepage">
-    <Navbar />
+    <Navbar User={user} />
       <Left Logout={Logout}/>
       <div className="posts">
         <Post />
@@ -35,4 +38,4 @@ function home() {
   );
 }
 
-export default home;
+export default Home;

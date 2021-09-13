@@ -4,8 +4,7 @@
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.36);
   margin-top: 6%;
   border-radius: 3px;
-  width: 35rem;
-  height: 40rem;
+  width: 50%;
 
   .post-inside {
     background: #f1f1f1;
@@ -33,9 +32,9 @@
 
   .mid-img {
     filter: drop-shadow(4px 3px 4px rgba(0, 0, 0, 0.27));
-    min-height: 20rem;
+    // min-height: 20rem;
     margin-top: 20px;
-    height: 23rem;
+    width: 95%;
   }
   .mid-icon {
     margin-top: 0;
@@ -71,6 +70,6 @@
   }
   .comments{
     width: 100%;
-    float: left;
+    // float: left;
   }
 }

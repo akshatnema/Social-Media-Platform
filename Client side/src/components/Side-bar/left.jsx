@@ -3,11 +3,11 @@ import './Side-bar.scss';
 
 function Left(props) {
   return (
-    <div class="left-cont left">
+    <div className="left-cont left">
      <center>
-     <button class="btns">
+     <button className="btns">
         {" "}
-        <i class="fas fa-plus"></i> Add Post
+        <i className="fas fa-plus"></i> Add Post
       </button></center>
       <h3>Menu</h3>
       <Button type="Home" />
@@ -15,7 +15,7 @@ function Left(props) {
       <Button type="Saved Post" />
       <Button type="Explore" />
       <center>
-      <button class="btns" onClick={props.Logout}> Logout</button></center>
+      <button className="btns" onClick={props.Logout}> Logout</button></center>
     </div>
   );
 }
