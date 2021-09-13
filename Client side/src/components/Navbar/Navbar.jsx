@@ -4,6 +4,7 @@ import { IconContext } from "react-icons/lib";
 import { FaSearch } from "react-icons/fa";
 import { BsFillChatDotsFill, BsPeopleCircle, BsBellFill } from "react-icons/bs";
 import Logo from "./Logo"
+import logo from "../../assets/logo.png";
 
 export const Navbar = () => {
   return (
@@ -11,7 +12,9 @@ export const Navbar = () => {
       <nav className="main-nav">
         {/* 1st logo  */}
 
-        <Logo />
+        <a className="logoo" href="/">
+          <img src={logo} alt="logo" />
+        </a>
 
         {/* 2nd Search */}
 

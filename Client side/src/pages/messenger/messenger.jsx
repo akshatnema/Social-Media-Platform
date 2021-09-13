@@ -6,7 +6,7 @@ import "./messenger.scss";
 import icon from "../../components/Right-Side-bar/pic.jpg";
 function Messenger() {
   return (
-    <div>
+    <div className="messenger">
       <div className="main-nav">
         <Logo />
         <div className="title">

@@ -1,9 +1,11 @@
+.messenger{
+
 .title{
     background-color:rgb(182, 178, 178);
     color:black;
     display: flex;
     flex-direction:row;
-    margin-left: -6%;
+    margin-left: -4%;
     padding-top: 5px ;
     img{
         margin-left: 20px;
@@ -18,8 +20,12 @@
             font-size: 13px;
         }
     }
+
+    .fas{
+        margin-left:70%;
+        margin-top:20px;
+    }
 }
 
-.fas{
-    margin-left:50%;
+
 }
