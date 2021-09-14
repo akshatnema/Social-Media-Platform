@@ -1,9 +1,7 @@
 import React from "react";
 import "./Navbar.scss";
 import { IconContext } from "react-icons/lib";
-import { FaSearch } from "react-icons/fa";
 import { BsFillChatDotsFill, BsPeopleCircle, BsBellFill } from "react-icons/bs";
-import Logo from "./Logo"
 import logo from "../../assets/logo.png";
 
 export const Navbar = (props) => {
@@ -48,7 +46,7 @@ export const Navbar = (props) => {
 
               <li>
                 <a href="" target="_blank">
-                  <img src={props.User.profilePicture} className="profilepic" />
+                  <img src={props.User.profilePicture} className="profilepic" alt="profile-pic"/>
                 </a>
               </li>
             </ul>
