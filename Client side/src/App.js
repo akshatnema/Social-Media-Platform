@@ -1,5 +1,6 @@
 import React,{useContext} from "react";
 import Login from "./pages/Signup page/login";
+import Profile from "./pages/Profilepage/profile";
 import {
   BrowserRouter as Router,
   Switch,
@@ -21,6 +22,7 @@ function App() {
         <Route exact path="/login">{user ? <Redirect to="/" /> : <Login />}</Route>
         <Route exact path="/login/success" component={loginSuccess} />
         <Route exact path="/login/failure"><p>Error logging in. Try Again</p></Route>
+        <Route exact path="/profile">{user ? <Profile /> : <Redirect to="/login" />}</Route>
       </Switch>
     </Router>
   );

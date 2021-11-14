@@ -1,0 +1,80 @@
+.plogoo-profile{
+    display: grid;
+    grid-column: 2/3;
+    height: 4rem;
+    /* justify-content: start;
+    align-items: center; */
+}
+
+.plogoo-profile img{ 
+    width:70%;
+    margin: 9px 9px;
+    margin-top: 32px;
+}
+.left-profile{
+    margin-top: 1rem;
+}
+.profile-main{
+    display: flex;
+
+}
+.profile-left{
+    flex-basis: 15%;
+    // background-color: rgb(48, 50, 168);
+}
+
+.profile-mid{
+    background-color: rgb(197, 32, 32);
+    height: 100vh;
+    flex-basis: 60%;
+}
+
+
+.profile-right{
+    flex-basis: 25%;
+    // background-color: rgb(48, 50, 168);
+    background-color: #F4F8FE;
+    display: flex;
+}
+.user-details{
+    display: flex;
+    justify-content: space-around;
+    
+}
+.profile-bottom{
+    margin:9px 3px;
+    // margin-bottom: 0;
+}
+
+.profile-user img{
+background-color: red;
+border-radius: 25%;
+width: 30px;    
+}
+
+.profile-user{
+    
+    // background-color: #1dca2b;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    // display:flex ;
+    // align-items: center;
+    // justify-content: center;
+
+}
+
+
+// .profile-right{
+// position: fixed;
+//   left: 78%;
+//   width: 22%;
+//   background-color: #eaecf3;
+//   padding: 0.8rem;
+//   top:0;
+//   padding-top: 4.5rem;
+//   height:100vh;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+// }
