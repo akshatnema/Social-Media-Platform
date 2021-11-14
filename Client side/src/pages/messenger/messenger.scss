@@ -1,9 +1,16 @@
 .messenger {
+  height: 100vh;
+  background-color: #D8E3F4;
+  overflow-y: hidden;
   .chat{
     position:relative;
     top:4rem;
     left:15%;
     width:85%;
+    background-color: #D8E3F4;
+    background-size: cover;
+    border-left: 5px solid #a9cafa;
+    height:100vh;
   }
   .header{
     display:flex;
@@ -52,11 +59,5 @@
       padding: 20px 20px 20px 20px;
     }
   }
- 
-  .chat-body{
-    color: black;
-    font-size:25px;
-    margin-top: 10%;
-    margin-left: 10%;
-  }
+
 }
