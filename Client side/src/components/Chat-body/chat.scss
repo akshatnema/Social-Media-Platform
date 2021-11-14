@@ -49,12 +49,13 @@
 
     .type{
         position: relative;
-        width: 90%;
-        margin:auto;
+        display: flex;
+        justify-content: space-evenly;
         margin-top:1rem;
         textarea{
            border-radius: 20px;
            padding: 5px 10px;
+           width: 80%;
         }
     }
     ::-webkit-scrollbar {

@@ -54,6 +54,7 @@ function chat() {
                 </div>
             </div>
             <div className="type">
+                <i class="far fa-image fa-2x"></i>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="1" placeholder="Type Your message"></textarea>
             </div>
         </div>
