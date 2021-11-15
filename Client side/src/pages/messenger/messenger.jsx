@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import Left from "../../components/Side-bar/left";
 import Navbar from "../../components/Navbar/Navbar";
+import axios from "axios";
 import { AuthContext } from "../../Context/Authcontext";
 import Chatbody from "../../components/Chat-body/chat"
 import Chatlist from "../../components/Chat-body/chatlist"
@@ -11,10 +12,24 @@ import icon from "../../components/Right-Side-bar/pic.jpg";
 function Messenger() {
   const { user } = useContext(AuthContext);
 
+  const Logout = async () => {
+    try {
+      sessionStorage.removeItem("user");
+      document.cookie.split(";").forEach(function (c) {
+        document.cookie = c
+          .replace(/^ +/, "")
+          .replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/");
+      });
+      const temp = await axios.get("/auth/logout");
+      console.log(temp);
+      window.location.reload();
+    } catch (err) {}
+  };
+
   return (
     <div className="messenger">
       <Navbar User={user} />
-      <Left />
+      <Left Logout={Logout} />
       <section className="chat">
         <div className="header">
           <div className="title">
