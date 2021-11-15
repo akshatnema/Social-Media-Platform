@@ -38,8 +38,10 @@ const right = () => {
         <div className="edit-user">
             <div>
                 <h1 style={{}}>First Name</h1>
-                <button>edit</button>
+                <button>Edit Profile</button>
             </div>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla nobis praesentium fuga pariatur ea sit unde aliquid corrupti quibusdam temporibus.</p>
 
         </div>
 
