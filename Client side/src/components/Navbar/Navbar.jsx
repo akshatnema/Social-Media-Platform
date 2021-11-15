@@ -1,9 +1,8 @@
 import React from "react";
 import "./Navbar.scss";
 import { IconContext } from "react-icons/lib";
-import { FaSearch } from "react-icons/fa";
 import { BsFillChatDotsFill, BsPeopleCircle, BsBellFill } from "react-icons/bs";
-import Logo from "./Logo"
+import logo from "../../assets/logo.png";
 
 export const Navbar = (props) => {
   return (
@@ -11,7 +10,9 @@ export const Navbar = (props) => {
       <nav className="main-nav">
         {/* 1st logo  */}
 
-        <Logo />
+        <a className="logoo" href="/">
+          <img src={logo} alt="logo" />
+        </a>
 
         {/* 2nd Search */}
 
@@ -45,7 +46,7 @@ export const Navbar = (props) => {
 
               <li>
                 <a href="" target="_blank">
-                  <img src={props.User.profilePicture} className="profilepic" />
+                  <img src={props.User.profilePicture} className="profilepic" alt="profile-pic"/>
                 </a>
               </li>
             </ul>
