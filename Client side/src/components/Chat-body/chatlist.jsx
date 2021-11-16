@@ -1,6 +1,7 @@
 import React from "react"
 import User from "./users"
 import img from "./pic.jpg"
+import "./chatlist.scss"
 
 function Chatlist() {
     return (
