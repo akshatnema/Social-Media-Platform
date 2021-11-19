@@ -29,7 +29,7 @@ export const Navbar = (props) => {
           <div className="right">
             <ul className="right-desktop">
               <li>
-                <a href="" target="_blank">
+                <a href="www.google.com" target="_blank">
                   {" "}
                   {/* notification*/}
                   <BsBellFill size={27} />
@@ -37,7 +37,7 @@ export const Navbar = (props) => {
               </li>
 
               <li>
-                <a href="" target="_blank">
+                <a href="www.google.com" target="_blank">
                   {" "}
                   {/* messages/chat */}
                   <BsFillChatDotsFill size={27} />
@@ -45,7 +45,7 @@ export const Navbar = (props) => {
               </li>
 
               <li>
-                <a href="" target="_blank">
+                <a href="www.google.com" target="_blank">
                   <img src={props.User.profilePicture} className="profilepic" alt="profile-pic"/>
                 </a>
               </li>
