@@ -1,7 +1,7 @@
 import React from "react";
 import "./Navbar.scss";
 import { IconContext } from "react-icons/lib";
-import { BsFillChatDotsFill, BsPeopleCircle, BsBellFill } from "react-icons/bs";
+import { BsFillChatDotsFill, BsBellFill } from "react-icons/bs";
 import logo from "../../assets/logo.png";
 
 export const Navbar = (props) => {

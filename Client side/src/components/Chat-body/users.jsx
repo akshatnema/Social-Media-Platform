@@ -6,7 +6,7 @@ function Users(props) {
       <div className="user-list"> 
            <div className="d-flex author">
                 <div className="author-img">
-                  <img src={props.img} height="50px" width="50px" />
+                  <img src={props.img} height="50px" width="50px" alt="profile-pic" />
                 </div>
                 <div className="author-box">
                     <div className="author-name">
