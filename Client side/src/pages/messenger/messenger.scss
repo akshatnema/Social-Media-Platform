@@ -1,16 +1,9 @@
 .messenger {
-  height: 100vh;
-  background-color: #D8E3F4;
-  overflow-y: hidden;
   .chat{
     position:relative;
     top:4rem;
     left:15%;
     width:85%;
-    background-color: #D8E3F4;
-    background-size: cover;
-    border-left: 5px solid #a9cafa;
-    height:100vh;
   }
   .header{
     display:flex;
@@ -59,18 +52,11 @@
       padding: 20px 20px 20px 20px;
     }
   }
-
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-  }
-  ::-webkit-scrollbar-thumb {
-    background: #615194;
-    border-radius:20px;
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    background: #7b6da8; 
+ 
+  .chat-body{
+    color: black;
+    font-size:25px;
+    margin-top: 10%;
+    margin-left: 10%;
   }
 }
