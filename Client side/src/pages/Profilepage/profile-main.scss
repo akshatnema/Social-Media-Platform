@@ -24,7 +24,7 @@
 }
 
 .profile-mid{
-    background-color: rgb(197, 32, 32);
+    // background-color: rgb(197, 32, 32);
     height: 100vh;
     flex-basis: 60%;
 }
@@ -65,6 +65,33 @@ width: 30px;
 }
 
 
+.edit-user{
+display: inline block;
+
+}
+
+.edit-user h1{
+    font-size: 1.5rem;
+    display: inline-block;
+    margin-right: 5%;
+}
+
+.edit-user button{
+    background: #696AA1;
+    border-radius: 20px;
+    color: white;
+    padding: 5px 20px 5px 20px;
+    margin: 10px;
+    font-size: 1.1rem;
+}
+
+.edit-user p{
+    margin: 20px 30px 20px 30px;
+    text-align: left;
+    
+}
+
+
 // .profile-right{
 // position: fixed;
 //   left: 78%;
@@ -78,3 +105,60 @@ width: 30px;
 //   flex-direction: column;
 //   justify-content: space-between;
 // }
+
+
+
+  #scroll::-webkit-scrollbar {
+    width: 15px;
+    background-color:#dfdfdf;
+    
+  }
+  
+  #scroll::-webkit-scrollbar-thumb {
+    
+    background: linear-gradient(213.56deg, #655499 15.5%, #6E8AAD 62.1%, #78C8C4 75.15%);
+    border-radius: 5px;
+  }
+
+
+
+
+
+  .pposts{
+
+  margin: 20px 20px 10px 20px;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+
+  }
+
+  
+  .section {
+    border: 1px solid rgba(104, 104, 104, 0.2);
+    border-radius: 10px;
+  }
+
+  .ppost{
+    height: 18vw;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 25px;
+    filter: drop-shadow(8px 6px 4px rgba(0, 0, 0, 0.27));
+
+    background-color: #696AA1;
+  }
+
+
+
+  .pleft-box{
+    height: 100vh;
+    overflow-y: scroll;
+    animation: glow 1s;
+    padding-left: 2%;
+  }
+  
+
+ 
+
+
