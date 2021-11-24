@@ -14,6 +14,14 @@ function Messenger() {
     <div className="messenger">
       <Navbar User={user} />
       <Left />
+<<<<<<< HEAD
+      <div> 
+      <div className="title">
+          <img src={icon} alt="profile-pic" />
+          <div class="title-con">
+            <div className="up"> Akshat</div>
+            <div className="down">last seen</div>
+=======
       <section className="chat">
       <div className="header">  
       <div className="title">
@@ -23,6 +31,7 @@ function Messenger() {
             <div className="up"> Akshat</div>
             <div className="down">last seen</div>
            </div>
+>>>>>>> 42198130d92198f857c419fd5c613327698217f1
           </div>
           <div className="icons">
             <i class="fas fa-video"></i>
@@ -32,12 +41,20 @@ function Messenger() {
         <div className="d-flex justify-content-between side-nav">
           CHATS 
           <i class="fas fa-search"></i>
+<<<<<<< HEAD
+        </div>
+       <div className="chatbody">
+      <Chatbody />
+      </div>
+      </div>
+=======
          </div>
         </div> 
       <div className="chatbody">
       <Chatbody />
       </div>
       </section>
+>>>>>>> 42198130d92198f857c419fd5c613327698217f1
     </div>
   );
 }
