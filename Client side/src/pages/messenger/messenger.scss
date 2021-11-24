@@ -1,51 +1,59 @@
 .messenger {
-  .title {
-    background-color: #7b8bc9;
-    color: black;
-    display: flex;
-    flex-direction: row;
-    position: relative;
+  .chat{
+    position:relative;
     top:4rem;
-    left: 15%;
-    padding-top: 8px;
-    width: 55%;
-    height: 4rem;
-    img {
-      margin-left: 20px;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-    }
-    .title-con {
-      margin-left: 10px;
-      .up{
-          font-size: 20px;
-      }
-      .down {
-        font-size: 13px;
-      }
-    }
-
-    .icons {
+    left:15%;
+    width:85%;
+  }
+  .header{
+    display:flex;
+    .title {
+      background-color: #7b8bc9;
+      color: black;
       display: flex;
-      margin-left: 70%;
-      margin-top: 15px;
-      .fas {
+      flex-direction: row;
+      justify-content: space-between;
+      position: relative;
+      width: 70%;
+      img {
         margin-left: 20px;
-        margin-right: 20px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+      .title-head{
+        display:flex;
+        margin:auto;
+        margin-left: 10px;
+        .title-con {
+          margin-left: 10px;
+          .up{
+              font-size: 20px;
+          }
+          .down {
+            font-size: 13px;
+          }
+        }
+      }
+      .icons {
+        display: flex;
+        .fas {
+          margin:auto;
+          margin-left: 20px;
+          margin-right: 20px;
+        }
       }
     }
+    .side-nav {
+      color: white; 
+      width: 30%;
+      font-size: 17px;
+      background-color: #655499;
+      padding: 20px 20px 20px 20px;
+    }
   }
-  .side-nav {
-    color: white;  
-    margin-left: 71%;
-    width: 28%;
-    font-size: 17px;
-    background-color: #655499;
-    padding: 20px 20px 20px 20px;
-  }
+ 
   .chat-body{
-    position: relative;
     color: black;
     font-size:25px;
     margin-top: 10%;
