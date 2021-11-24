@@ -2,6 +2,8 @@ import React from 'react';
 import "./profile-main.scss";
 
 const mid = () => {
+
+
     const data = [{
         image: "",
         like: "",
@@ -22,99 +24,55 @@ const mid = () => {
         like: "",
         comments: ""
     }]
-    return (
-        <>
-
-            <div className="pleft-box" id="scroll">
-
-                <div className="pposts">
-
-                    <div className="section">
-
-                        <div className="ppost">
-
-                            post 1
-                            {/* style = {{ backgroundImage: `url("abc")` }} */}
-
-                        </div>
-
-                        <div className="ppost">
-
-                            post 2
-
-                        </div>
 
 
-                        <div className="ppost">
+    // const post = ({ data }) => {
 
-                            post 3
-
-                        </div>
-
-
-                    </div>
-
-
-
-                    <div className="section">
-
-                        <div className="ppost">
-
-                            post 1
-                            {/* style = {{ backgroundImage: `url("abc")` }} */}
-
-                        </div>
-
-                        <div className="ppost">
-
-                            post 2
-
-                        </div>
+    
+        return (
+            <>
+                {/* {   data.map((ele) => { */}
+                    {/* const { image } = ele; */}
+                 
 
 
-                        <div className="ppost">
+                    {/* return ( */}
+                        
+                            <div className="pleft-box" id="scroll">
+                
+                
+                
+                                <div className="pposts">
+                                        <div className="ppost">
+                                        {/* {image}  */}
+                                            
 
-                            post 3
 
-                        </div>
+                                            {/* /* style = {{ backgroundImage: `url("abc")` }} */} 
+                                         
+                                        
 
 
-                    </div>
+                                        </div>
+                                </div>
+                
+                
+                
+                
+                            </div>
+
+                    )
+                {/* })} */}
+                
+                        </>
+                    )
 
 
 
-                    <div className="section">
 
-                        <div className="ppost">
+            }
+        // };
 
-                            post 1
-                            {/* style = {{ backgroundImage: `url("abc")` }} */}
-
-                        </div>
-
-                        <div className="ppost">
-
-                            post 2
-
-                        </div>
-
-
-                        <div className="ppost">
-
-                            post 3
-
-                        </div>
-
-
-                    </div>
-
-
-                </div>
-
-            </div>
-
-        </>
-    )
-}
 
 export default mid;
+

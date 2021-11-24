@@ -1,3 +1,5 @@
+
+
 .plogoo-profile{
     display: grid;
     grid-column: 2/3;
@@ -95,20 +97,6 @@ display: inline block;
 }
 
 
-// .profile-right{
-// position: fixed;
-//   left: 78%;
-//   width: 22%;
-//   background-color: #eaecf3;
-//   padding: 0.8rem;
-//   top:0;
-//   padding-top: 4.5rem;
-//   height:100vh;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: space-between;
-// }
-
 
 
   #scroll::-webkit-scrollbar {
@@ -128,19 +116,15 @@ display: inline block;
 
 
   .pposts{
-
-  margin: 20px 20px 10px 20px;
-  display: grid;
-  grid-gap: 30px;
-  grid-template-columns: repeat(3, 1fr);
+    
+    margin: 20px 20px 10px 20px;
+    display: flex;
+     flex-wrap:wrap;
 
   }
 
   
-  .section {
-    border: 1px solid rgba(104, 104, 104, 0.2);
-    border-radius: 10px;
-  }
+
 
   .ppost{
     height: 18vw;
@@ -148,8 +132,11 @@ display: inline block;
     background-size: cover;
     margin-bottom: 25px;
     filter: drop-shadow(8px 6px 4px rgba(0, 0, 0, 0.27));
-
     background-color: #696AA1;
+
+    flex-basis: 30%;
+    margin-right: 25px;
+    // justify-content: space-between;
   }
 
 
@@ -159,9 +146,11 @@ display: inline block;
     overflow-y: scroll;
     animation: glow 1s;
     padding-left: 2%;
+
+    // display: flex;
+    // flex-direction: row;
+
   }
   
 
  
-
-
