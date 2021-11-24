@@ -1,8 +1,15 @@
 import React from 'react';
 // import {Row,Column} from "react-bootstrap";
 import "./profile-main.scss";
+import { useEffect } from 'react';
+import {useContext} from "react";
+import { AuthContext } from "../../Context/Authcontext";
 
-const right = () => {
+const Right = () => {
+
+    const { user } = useContext(AuthContext);
+       console.log(user);
+      const{username,followers,followings}=user;
     return (
        <>
 
@@ -13,7 +20,7 @@ const right = () => {
           </div>  
 
        <div className="profile-bottom">
-       <h1>USER</h1>
+       <h1>{username}</h1>
        </div>
 
        <div className="user-details profile-bottom">
@@ -25,12 +32,12 @@ const right = () => {
 
         <div >
         <p>Followers</p>
-        <p>9</p>
+        <p>{followers.length}</p>
         </div>
          
         <div>
         <p>Following</p>
-        <p>9</p>
+        <p>{followings.length}</p>
         </div>
     
         </div>
@@ -52,4 +59,4 @@ const right = () => {
     )
 }
  
-export default right;
+export default Right;

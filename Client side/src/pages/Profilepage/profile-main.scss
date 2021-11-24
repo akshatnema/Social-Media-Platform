@@ -5,6 +5,9 @@
     /* justify-content: start;
     align-items: center; */
 }
+.left-cont{
+    margin-top: 0;
+}
 
 .plogoo-profile img{ 
     width:40%;
@@ -26,12 +29,12 @@
 .profile-mid{
     // background-color: rgb(197, 32, 32);
     height: 100vh;
-    flex-basis: 60%;
+    flex-basis: 65%;
 }
 
 
 .profile-right{
-    flex-basis: 25%;
+    flex-basis: 20%;
     // background-color: rgb(48, 50, 168);
     background-color: #F4F8FE;
     display: flex;
