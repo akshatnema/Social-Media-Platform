@@ -17,7 +17,7 @@
 
 <div align="center">
 
-### A Social Media Platform which aims to connect the people around the world so as they can share their memories, photos, videos and communicate from any part of world.HI-CON provides secured one-to-one text and voice-video call facility to the users for better communication.
+**A Social Media Platform which aims to connect the people around the world so as they can share their memories, photos, videos and communicate from any part of world.HI-CON provides secured one-to-one text and voice-video call facility to the users for better communication.**
 <br>
 </div>
 
