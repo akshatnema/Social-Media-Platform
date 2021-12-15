@@ -50,6 +50,7 @@ function Messenger() {
             <i class="fas fa-search"></i>
           </div>
         </div>
+
         <div className="d-flex flex-row">
             <Chatbody />
             <Chatlist />

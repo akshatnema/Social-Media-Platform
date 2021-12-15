@@ -8,6 +8,7 @@ const session= require("express-session");
 const  passport=require("passport");
 const userRoute = require("./routes/users");
 const authRoute = require("./routes/auth");
+const postsRoute = require("./routes/posts")
 const bodyParser = require("body-parser");
 const cookieParser = require('cookie-parser');
 // const cors = require("cors");
@@ -44,6 +45,7 @@ app.use(helmet());
 app.use(morgan('combined'));
 app.use("/api/users", userRoute);
 app.use("/api/auth", authRoute);
+app.use("/api/posts", postsRoute);
 
 // app.use(cors({
     // origin: '*',

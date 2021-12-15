@@ -6,6 +6,7 @@ const FacebookStrategy = require("passport-facebook").Strategy;
 const TwitterStrategy = require("passport-twitter").Strategy;
 
 passport.use(User.createStrategy());
+
 passport.serializeUser(function (user, done) {
   console.log("Serializing user..");
   done(null, user.id);
@@ -35,7 +36,7 @@ let generateUniqueAccountName = async (proposedName) => {
     return proposedName;
 };
 
-const successLoginUrl = "http://localhost:3000/login/success";
+const successLoginUrl = "http://localhost:3000/";
 const failureLoginUrl = "http://localhost:3000/login/failure";
 
 //   Google Login strategy
@@ -105,6 +106,7 @@ passport.use(
         "id",
         "displayName",
         "email",
+        "picture.type(large)",
         "birthday",
         "friends",
         "first_name",
@@ -116,6 +118,7 @@ passport.use(
     },
     async (accessToken, refreshToken, profile, done) => {
       console.log(profile);
+      console.log(accessToken);
       let newname = await generateUniqueAccountName(profile.displayName);
       User.findOne({
         'facebookId': profile.id 
@@ -128,6 +131,7 @@ passport.use(
                 email: profile.emails[0].value,
                 username: newname,
                 facebookId: profile.id,
+                profilePicture: profile.photos ? profile.photos[0].value : "https://c-engage.com/wp-content/uploads/2019/09/member-placeholder-500px-1024x1024.jpg"
             });
             user.save(function(err) {
                 if (err) console.log(err);
@@ -181,7 +185,8 @@ passport.use(
             user = new User({
                 email: 'profile.emails[0].value',
                 username: newname,
-                twitterId: profile.id
+                twitterId: profile.id,
+                profilePicture: profile.photos ? profile.photos[0].value : "https://c-engage.com/wp-content/uploads/2019/09/member-placeholder-500px-1024x1024.jpg"
             });
             user.save(function(err) {
                 if (err) console.log(err);
