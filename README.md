@@ -38,7 +38,7 @@ Here are the steps you need to do:
    Make sure you replace `<your-username>` with your Github username
 
    ```
-   git clone https://github.com/<your-username>/Vehicle-Servicing-Management.git
+   git clone https://github.com/<your-username>/Social-Media-Platform.git
    ```
 3. Go to project directory `Social-Media-Platform` in terminal, using following command.
    ```
@@ -53,7 +53,10 @@ Here are the steps you need to do:
    cd Server side
    npm install
    ```
-6. Make `.env` file using `.env.example` file and add your Google, Facebook and Twitter client ID and Secrets.
+6. Make `.env` file using `.env.example` file and add your Google, Facebook and Twitter client ID and Secrets. Use following command to copy the `.env.example`.
+   ```
+   cp .env .env.example
+   ```
 7. Run the Server side using the following command:
    ```
    npm start
@@ -64,7 +67,7 @@ Here are the steps you need to do:
    npm install
    npm start
    ```
-8. Open https://localhost:8000 on your browser to see the project running.
+8. Open https://localhost:3000 on your browser to see the project running.
 
 ## Contact Us
 
