@@ -1,7 +1,7 @@
 import React from 'react';
 // import {Row,Column} from "react-bootstrap";
 import "./profile-main.scss";
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 import {useContext} from "react";
 import { AuthContext } from "../../Context/Authcontext";
 

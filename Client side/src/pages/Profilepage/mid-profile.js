@@ -4,26 +4,26 @@ import "./profile-main.scss";
 const mid = () => {
 
 
-    const data = [{
-        image: "",
-        like: "",
-        comments: ""
-    },
-    {
-        image: "",
-        like: "",
-        comments: ""
-    },
-    {
-        image: "",
-        like: "",
-        comments: ""
-    },
-    {
-        image: "",
-        like: "",
-        comments: ""
-    }]
+    // const data = [{
+    //     image: "",
+    //     like: "",
+    //     comments: ""
+    // },
+    // {
+    //     image: "",
+    //     like: "",
+    //     comments: ""
+    // },
+    // {
+    //     image: "",
+    //     like: "",
+    //     comments: ""
+    // },
+    // {
+    //     image: "",
+    //     like: "",
+    //     comments: ""
+    // }]
 
 
     // const post = ({ data }) => {
