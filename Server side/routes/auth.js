@@ -21,19 +21,21 @@ passport.deserializeUser(function (id, done) {
 //  Function for resolving same username conflict
 
 let generateUniqueAccountName = async (proposedName) => {
-  const func=await User.findOne({username: proposedName},(err,account) => {
-    if(!err){
-      if (account) {
-        proposedName += Math.floor((Math.random() * 100) + 1);
-        return generateUniqueAccountName(proposedName);
-      }
-      return ;
-    }
-      else{
+  const func = await User.findOne(
+    { username: proposedName },
+    (err, account) => {
+      if (!err) {
+        if (account) {
+          proposedName += Math.floor(Math.random() * 100 + 1);
+          return generateUniqueAccountName(proposedName);
+        }
+        return;
+      } else {
         console.log(err);
       }
-    });
-    return proposedName;
+    }
+  );
+  return proposedName;
 };
 
 const successLoginUrl = "http://localhost:3000/";
@@ -52,27 +54,30 @@ passport.use(
     async (accessToken, refreshToken, profile, done) => {
       console.log(profile);
       let newname = await generateUniqueAccountName(profile.displayName);
-      User.findOne({
-        'googleId': profile.id 
-      }, function(err, user) {
+      User.findOne(
+        {
+          googleId: profile.id,
+        },
+        function (err, user) {
           if (err) {
-              return done(err);
+            return done(err);
           }
           if (!user) {
-              user = new User({
-                  email: profile.emails[0].value,
-                  username: newname,
-                  googleId: profile.id,
-                  profilePicture: profile.photos[0].value
-              });
-              user.save(function(err) {
-                  if (err) console.log(err);
-                  return done(err, user);
-              });
-          } else {
+            user = new User({
+              email: profile.emails[0].value,
+              username: newname,
+              googleId: profile.id,
+              profilePicture: profile.photos[0].value,
+            });
+            user.save(function (err) {
+              if (err) console.log(err);
               return done(err, user);
+            });
+          } else {
+            return done(err, user);
           }
-      });
+        }
+      );
     }
   )
 );
@@ -84,10 +89,11 @@ router.get(
 
 router.get(
   "/google/HI-CON",
-  passport.authenticate("google", {     
-    failureRedirect: failureLoginUrl ,
-    session: true
-  }),(req,res) => {
+  passport.authenticate("google", {
+    failureRedirect: failureLoginUrl,
+    session: true,
+  }),
+  (req, res) => {
     // res.json(req.user);
     res.redirect(successLoginUrl);
   }
@@ -120,27 +126,32 @@ passport.use(
       console.log(profile);
       console.log(accessToken);
       let newname = await generateUniqueAccountName(profile.displayName);
-      User.findOne({
-        'facebookId': profile.id 
-    }, function(err, user) {
-        if (err) {
+      User.findOne(
+        {
+          facebookId: profile.id,
+        },
+        function (err, user) {
+          if (err) {
             return done(err);
-        }
-        if (!user) {
+          }
+          if (!user) {
             user = new User({
-                email: profile.emails[0].value,
-                username: newname,
-                facebookId: profile.id,
-                profilePicture: profile.photos ? profile.photos[0].value : "https://c-engage.com/wp-content/uploads/2019/09/member-placeholder-500px-1024x1024.jpg"
+              email: profile.emails[0].value,
+              username: newname,
+              facebookId: profile.id,
+              profilePicture: profile.photos
+                ? profile.photos[0].value
+                : "https://c-engage.com/wp-content/uploads/2019/09/member-placeholder-500px-1024x1024.jpg",
             });
-            user.save(function(err) {
-                if (err) console.log(err);
-                return done(err, user);
+            user.save(function (err) {
+              if (err) console.log(err);
+              return done(err, user);
             });
-        } else {
+          } else {
             return done(err, user);
+          }
         }
-    });
+      );
     }
   )
 );
@@ -153,9 +164,10 @@ router.get(
 router.get(
   "/facebook/HI-CON",
   passport.authenticate("facebook", {
-    failureRedirect: failureLoginUrl ,
-    session: true
-  }),(req,res) => {
+    failureRedirect: failureLoginUrl,
+    session: true,
+  }),
+  (req, res) => {
     // res.json(req.user);
     res.redirect(successLoginUrl);
   }
@@ -174,29 +186,34 @@ passport.use(
       includeEmail: true,
     },
     async (token, tokenSecret, profile, done) => {
-     let newname = await generateUniqueAccountName(profile.displayName);
-     User.findOne({
-      'twitterId': profile.id 
-    }, function(err, user) {
-        if (err) {
+      let newname = await generateUniqueAccountName(profile.displayName);
+      User.findOne(
+        {
+          twitterId: profile.id,
+        },
+        function (err, user) {
+          if (err) {
             return done(err);
-        }
-        if (!user) {
+          }
+          if (!user) {
             user = new User({
-                email: 'profile.emails[0].value',
-                username: newname,
-                twitterId: profile.id,
-                profilePicture: profile.photos ? profile.photos[0].value : "https://c-engage.com/wp-content/uploads/2019/09/member-placeholder-500px-1024x1024.jpg"
+              email: "profile.emails[0].value",
+              username: newname,
+              twitterId: profile.id,
+              profilePicture: profile.photos
+                ? profile.photos[0].value
+                : "https://c-engage.com/wp-content/uploads/2019/09/member-placeholder-500px-1024x1024.jpg",
             });
-            user.save(function(err) {
-                if (err) console.log(err);
-                return done(err, user);
+            user.save(function (err) {
+              if (err) console.log(err);
+              return done(err, user);
             });
-        } else {
+          } else {
             return done(err, user);
+          }
         }
-    });
-    console.log(profile);
+      );
+      console.log(profile);
     }
   )
 );
@@ -206,9 +223,10 @@ router.get("/twitter", passport.authenticate("twitter"));
 router.get(
   "/twitter/HI-CON",
   passport.authenticate("twitter", {
-    failureRedirect: failureLoginUrl ,
-    session: true
-  }),(req,res) => {
+    failureRedirect: failureLoginUrl,
+    session: true,
+  }),
+  (req, res) => {
     // res.json(req.user);
     res.redirect(successLoginUrl);
   }
@@ -219,14 +237,14 @@ router.get(
 //REGISTER
 router.post("/register", async (req, res) => {
   Users = new User({ email: req.body.email, username: req.body.username });
-  // console.log(req.body); 
+  // console.log(req.body);
   User.register(Users, req.body.password, (err, user) => {
     if (err) {
-      return res.status(500).json({ success : false, message : err });
+      return res.status(500).json({ success: false, message: err });
     } else {
       passport.authenticate("local")(req, res, () => {
         console.log(user);
-        return res.status(200).json(user)
+        return res.status(200).json(user);
       });
     }
   });
@@ -234,14 +252,18 @@ router.post("/register", async (req, res) => {
 
 //LOGIN
 
-router.post('/login', function(req, res, next) {
-  passport.authenticate('local', function(err, user, info) {
-    if (err) { return next(err) }
-    if (!user) {
-      return res.status(404).json({ success : false, message : info.message });
+router.post("/login", function (req, res, next) {
+  passport.authenticate("local", function (err, user, info) {
+    if (err) {
+      return next(err);
     }
-    req.logIn(user, function(err) {
-      if (err) { return next(err); }
+    if (!user) {
+      return res.status(404).json({ success: false, message: info.message });
+    }
+    req.logIn(user, function (err) {
+      if (err) {
+        return next(err);
+      }
       console.log(user);
       return res.status(200).json(user);
     });
@@ -250,28 +272,28 @@ router.post('/login', function(req, res, next) {
 
 //Logout
 
-router.get('/logout', function (req, res){
+router.get("/logout", function (req, res) {
   req.logOut();
-  res.clearCookie('connect.sid');
+  res.clearCookie("connect.sid");
   req.session.destroy(function (err) {
     res
-        .status(200)
-        .json({ success: true, message: 'User logged out successfully' })
+      .status(200)
+      .json({ success: true, message: "User logged out successfully" });
   });
 });
 
 //Check if user is authenticated
 
-const checkUserStatus = (req,res,next) => {
-  if(req.user){
+const checkUserStatus = (req, res, next) => {
+  if (req.user) {
     next();
-  }else{
+  } else {
     res.status(476).send("You must login first");
   }
-}
+};
 
-router.get("/user",checkUserStatus,(req,res) => {
-    res.json(req.user)
+router.get("/user", checkUserStatus, (req, res) => {
+  res.json(req.user);
 });
 
 module.exports = router;

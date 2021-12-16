@@ -3,8 +3,8 @@ import Left from "../../components/Side-bar/left";
 import Navbar from "../../components/Navbar/Navbar";
 import axios from "axios";
 import { AuthContext } from "../../Context/Authcontext";
-import Chatbody from "../../components/Chat-body/chat"
-import Chatlist from "../../components/Chat-body/chatlist"
+import Chatbody from "../../components/Chat-body/chat";
+import Chatlist from "../../components/Chat-body/chatlist";
 import "../../components/Navbar/Navbar.scss";
 import "./messenger.scss";
 import icon from "../../components/Right-Side-bar/pic.jpg";
@@ -52,8 +52,8 @@ function Messenger() {
         </div>
 
         <div className="d-flex flex-row">
-            <Chatbody />
-            <Chatlist />
+          <Chatbody />
+          <Chatlist />
         </div>
       </section>
     </div>

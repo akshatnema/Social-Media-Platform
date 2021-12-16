@@ -7,11 +7,7 @@ function Button(props) {
   };
   return (
     <div className="sidebarWrapper">
-      <button
-        type="button"
-        onClick={addstyle}
-        className="btn-left "
-      >
+      <button type="button" onClick={addstyle} className="btn-left ">
         {props.type}
       </button>
     </div>

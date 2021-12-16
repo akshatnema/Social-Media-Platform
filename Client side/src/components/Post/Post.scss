@@ -1,6 +1,10 @@
 .post {
   margin: auto;
-  background: linear-gradient(90deg, rgba(195,253,239,1) 0%, rgba(210,215,253,1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(195, 253, 239, 1) 0%,
+    rgba(210, 215, 253, 1) 100%
+  );
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.36);
   margin-top: 6%;
   border-radius: 3px;
@@ -41,7 +45,7 @@
     margin: 0 5px;
     color: white;
   }
-  p{
+  p {
     height: 60px;
     .right-icon {
       text-decoration: none;
@@ -49,26 +53,25 @@
       margin: 14px 14px 0 14px;
       cursor: pointer;
     }
-  
+
     .heart {
       float: left;
       margin: -23px -14px 0 -14px;
       width: 100px;
       height: 100px;
-      background: url("../../assets/heart.png")
-        no-repeat;
+      background: url("../../assets/heart.png") no-repeat;
       background-position: 0 0;
       cursor: pointer;
       transition: background-position 1s steps(28);
       transition-duration: 0s;
-  
+
       &.is-active {
         transition-duration: 1s;
         background-position: -2800px 0;
       }
     }
   }
-  .comments{
+  .comments {
     width: 100%;
     // float: left;
   }

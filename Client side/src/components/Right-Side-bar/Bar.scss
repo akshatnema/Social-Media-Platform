@@ -4,9 +4,9 @@
   width: 22%;
   background-color: #eaecf3;
   padding: 0.8rem;
-  top:0;
+  top: 0;
   padding-top: 4.5rem;
-  height:100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -16,8 +16,8 @@
     margin-top: 13px;
   }
 
-  .img{
-    margin-right:10px;
+  .img {
+    margin-right: 10px;
     border-radius: 50%;
   }
 
@@ -30,14 +30,14 @@
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 3px;
-    margin-left:10rem;
+    margin-left: 10rem;
   }
 
   .down {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
   }
-  .d{
+  .d {
     display: flex;
     justify-content: space-between;
     align-items: center;

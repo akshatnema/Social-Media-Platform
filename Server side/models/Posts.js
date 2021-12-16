@@ -21,7 +21,7 @@ const PostSchema = new mongoose.Schema(
       type: Array,
       default: [{}],
     },
-    tags :{
+    tags: {
       type: Array,
       default: [{}],
     },
