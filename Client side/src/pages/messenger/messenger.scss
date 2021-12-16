@@ -1,19 +1,19 @@
 .messenger {
   height: 100vh;
-  background-color: #D8E3F4;
+  background-color: #d8e3f4;
   overflow-y: hidden;
-  .chat{
-    position:relative;
-    top:4rem;
-    left:15%;
-    width:85%;
-    background-color: #D8E3F4;
+  .chat {
+    position: relative;
+    top: 4rem;
+    left: 15%;
+    width: 85%;
+    background-color: #d8e3f4;
     background-size: cover;
     border-left: 5px solid #a9cafa;
-    height:100vh;
+    height: 100vh;
   }
-  .header{
-    display:flex;
+  .header {
+    display: flex;
     .title {
       background-color: #7b8bc9;
       color: black;
@@ -28,14 +28,14 @@
         height: 50px;
         border-radius: 50%;
       }
-      .title-head{
-        display:flex;
-        margin:auto;
+      .title-head {
+        display: flex;
+        margin: auto;
         margin-left: 10px;
         .title-con {
           margin-left: 10px;
-          .up{
-              font-size: 20px;
+          .up {
+            font-size: 20px;
           }
           .down {
             font-size: 13px;
@@ -45,14 +45,14 @@
       .icons {
         display: flex;
         .fas {
-          margin:auto;
+          margin: auto;
           margin-left: 20px;
           margin-right: 20px;
         }
       }
     }
     .side-nav {
-      color: white; 
+      color: white;
       width: 30%;
       font-size: 17px;
       background-color: #655499;
@@ -64,13 +64,13 @@
     width: 10px;
   }
   ::-webkit-scrollbar-track {
-    background: #f1f1f1; 
+    background: #f1f1f1;
   }
   ::-webkit-scrollbar-thumb {
     background: #615194;
-    border-radius:20px;
+    border-radius: 20px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #7b6da8; 
+    background: #7b6da8;
   }
 }

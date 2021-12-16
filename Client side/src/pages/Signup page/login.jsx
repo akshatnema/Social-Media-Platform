@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useContext, useState, useEffect} from "react";
+import React, { useContext, useState, useEffect } from "react";
 import facebook from "../../assets/facebook.png";
 import logo from "../../assets/logo.png";
 import google from "../../assets/search.png";
