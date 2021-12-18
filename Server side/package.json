@@ -4,7 +4,8 @@
   "description": "",
   "main": "App.js",
   "scripts": {
-    "start": "node App.js"
+    "start": "node App.js",
+    "format": "prettier --write ."
   },
   "keywords": [],
   "author": "",
@@ -30,6 +31,7 @@
     "passport-google-oauth20": "^2.0.0",
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^6.1.0",
-    "passport-twitter": "^1.0.4"
+    "passport-twitter": "^1.0.4",
+    "prettier": "^2.5.1"
   }
 }

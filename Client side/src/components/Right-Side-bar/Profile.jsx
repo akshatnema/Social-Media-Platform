@@ -15,9 +15,10 @@ function Profile(props) {
         <div className="text">{props.name} </div>
       </div>
       <div>
-      <button type="button" className="btn btn-light btn-right">
-        Follow
-      </button></div>
+        <button type="button" className="btn btn-light btn-right">
+          Follow
+        </button>
+      </div>
     </div>
   );
 }

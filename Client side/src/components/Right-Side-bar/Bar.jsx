@@ -27,15 +27,16 @@ function Bar(props) {
         <h4>Account</h4>
         <hr />
         <div className="d acc-details">
-        <div>
-          <img
-            src={img}
-            alt="profile"
-            height="30px"
-            width="30px"
-            className="img"
-          ></img>
-          <div className="acc-name">{props.user}</div></div>
+          <div>
+            <img
+              src={img}
+              alt="profile"
+              height="30px"
+              width="30px"
+              className="img"
+            ></img>
+            <div className="acc-name">{props.user}</div>
+          </div>
           <p>
             <i className="arrow down"></i>
           </p>

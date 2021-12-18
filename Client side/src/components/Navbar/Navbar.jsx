@@ -46,7 +46,11 @@ export const Navbar = (props) => {
 
               <li>
                 <a href="www.google.com" target="_blank">
-                  <img src={props.User.profilePicture} className="profilepic" alt="profile-pic"/>
+                  <img
+                    src={props.User.profilePicture}
+                    className="profilepic"
+                    alt="profile-pic"
+                  />
                 </a>
               </li>
             </ul>
