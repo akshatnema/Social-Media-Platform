@@ -8,8 +8,14 @@ body {
 }
 .Homepage {
   .posts {
-    margin-left: 15%;
+    margin-left: 16%;
     margin-right: 24%;
     padding: 4% 0;
+  }
+  .add-post{
+    margin: auto;
+    max-width: 62rem;
+    padding-top: 4%;
+    padding-bottom: 4%;
   }
 }

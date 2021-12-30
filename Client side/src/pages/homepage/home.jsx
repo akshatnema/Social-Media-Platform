@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import Post from "../../components/Post/Post";
+import AddPost from "../../components/Upload-post/newPost"
 import Left from "../../components/Side-bar/left";
 import Navbar from "../../components/Navbar/Navbar.jsx";
 import axios from "axios";
@@ -24,10 +25,12 @@ function Home() {
     } catch (err) {}
   };
 
+
   return (
     <div className="Homepage">
       <Navbar User={user} />
       <Left Logout={Logout} />
+      <div className="add-post"><AddPost /></div>
       <div className="posts">
         <Post />
         <Post />
